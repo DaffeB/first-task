@@ -1,7 +1,7 @@
+// HomeFile.js
 
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import '../styles.css';
 
 const HomeFile = () => {
     const [userData, setUserData] = useState([]);
@@ -22,25 +22,44 @@ const HomeFile = () => {
     }, []);
 
     return (
-        <div className='container'>
-            <h1 className='main-title'>USERS</h1>
+        <div style={{ maxWidth: '70%', margin: '0 auto', padding: '20px' }}>
+            <h1 style={{ fontSize: '28px', marginBottom: '20px', color: 'rgb(52, 96, 103)' }}>USERS</h1>
             {userData.length > 0 ? (
-                <ul className='user-list'>
+                <div style={{ display: 'flex', flexWrap: 'wrap' }}>
                     {userData.map((user) => (
-                        <li key={user.id}>
-                            <Link to={`/user/${user.id}`}>{user.name}</Link>
-                        </li>
+                        <div
+                            key={user.id}
+                            style={{
+                                width: 'calc(40% - 20px)',
+                                margin: '10px',
+                                padding: '15px',
+                                borderRadius: '8px',
+                                background: 'white',
+                                boxShadow: '0 4px 8px  rgb(52, 96, 103)', // Gr
+                            }}
+                        >
+
+                            <Link
+                                to={`/user/${user.id}`}
+                                style={{
+                                    textDecoration: 'none',
+                                    color: '#333',
+                                    fontWeight: 'bold',
+                                    display: 'block',
+                                    marginBottom: '10px',
+                                }}
+                            >
+                                {user.name}
+                            </Link>
+                            <p style={{ color: '#555', margin: 0 }}>{user.email}</p>
+                        </div>
                     ))}
-                </ul>
+                </div>
             ) : (
-                <p className='loading-data'>Loading data.</p>
+                <p style={{ fontSize: '18px', color: '#888' }}>Loading data.</p>
             )}
         </div>
     );
 };
 
 export default HomeFile;
-
-
-
-
