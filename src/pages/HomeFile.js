@@ -1,6 +1,5 @@
-// HomeFile.js
 
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
 const HomeFile = () => {
@@ -35,7 +34,7 @@ const HomeFile = () => {
                                 padding: '15px',
                                 borderRadius: '8px',
                                 background: 'white',
-                                boxShadow: '0 4px 8px  rgb(52, 96, 103)', // Gr
+                                boxShadow: '0 4px 8px  rgb(52, 96, 103)',
                             }}
                         >
 
