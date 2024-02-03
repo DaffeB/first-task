@@ -3,16 +3,16 @@
     margin: 0 auto;
     padding: 20px;
   }
-  
   .title {
-    font-size: 28px;
+    font-size: 100px;
     margin-bottom: 20px;
-    color: rgb(52, 96, 103);
+    color: rgb(40, 108, 118);
   }
   
   .user-container {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center; 
   }
   
   .user-card {
