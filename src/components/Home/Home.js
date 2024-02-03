@@ -36,7 +36,6 @@ const Home = () => {
                             >
                                 {user.name}
                             </Link>
-                            <p className="user-email">{user.email}</p>
                         </div>
                     ))}
                 </div>

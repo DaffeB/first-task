@@ -1,8 +1,9 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import UserPosts from './pages/UserPost/UserPosts';
 import HomeFile from './components/Home/Home';
+import UserPosts from './pages/UserPost/UserPosts';
 import UserComments from './pages/UserComments/UsersComments';
+
 
 
 const App = () => {
